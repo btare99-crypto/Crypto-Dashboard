@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoValut - Profile</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/chartstyle.css">
+</head>
+<body>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="close">✖</div>
+    </button>
+    <aside class="sidebar">
+        <div class="aside-head">
+            <h2 class="CV-logo">CV</h1>
+            <h1>CryptoValut</h1>
+        </div>
+        <div class="main-menu">
+            <h2>MAIN MENU</h2>
+            <nav>
+                <ul>
+                    <li><a href="/index.html"><i class="fa-solid fa-layer-group"></i>Dashboard</a></li>
+                    <li><a href="/market.html"><i class="fa-solid fa-chart-line"></i>Markets</a></li>
+                    <li><a href="/wallet.html"><i class="fa-regular fa-credit-card"></i>Wallet</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-menu">
+            <h2>ACCOUNT</h2>
+            <nav>
+                <ul>
+                    <li><a href="profile.html" class="active"><i class="fa-solid fa-gear"></i>Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="aside-footer">
+            <a href="" class="light-mode"><i class="fa-regular fa-lightbulb"></i>Light Mode</a>
+            <a href="/crypto-login.html" class="logout"><i class="fa-solid fa-right-to-bracket"></i>Logout</a>
+        </div>
+    </aside>
+
+  <main class="content">
+    <div class="content-header">
+        <div class="content-navigation">
+            <h1>Settings</h1>
+            <p>Manage your account preferences and security</p>
+        </div>
+    </div>
+
+    <div class="settings-tabs">
+        <a href="/Settings/profile.html" class="settings-tab active" data-tab="profile">Profile</a>
+        <a href="/Settings/security.html" class="settings-tab" data-tab="security">Security</a>
+        <a href="/Settings/notifications.html" class="settings-tab" data-tab="notifications">Notifications</a>
+        <a href="/Settings/preferences.html" class="settings-tab" data-tab="preferences">Preferences</a>
+        <a href="/Settings/connected.html" class="settings-tab" data-tab="connected">Connected</a>
+    </div>
+
+    <div class="card">
+        <div class="profile-header">
+            <div class="profile-avatar active">
+                BT
+            </div>
+            <div class="profile-info">
+                <h2>Bjorni Tare</h2>
+                <p>btare99@gmail.com</p>
+                <span class="active">Pro Trader</span>
+            </div>
+        </div>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-input" value="Alex">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-input" value="Morgan">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-input" value="alex.morgan@email.com">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-input" value="+1 (555) 123-4567">
+            </div>
+            <div class="form-group full-width">
+                <label class="form-label">Bio</label>
+                <input type="text" class="form-input" placeholder="Tell us about yourself..." value="Crypto enthusiast and day trader since 2017">
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button class="save-button active">Save Changes</button>
+            <button class="save-button">Cancel</button>
+        </div>
+    </div>
+
+
+
+    <footer>
+    <div class="footer">Copyright &copy; 2026 CryptoVault.</div>
+    </footer>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>

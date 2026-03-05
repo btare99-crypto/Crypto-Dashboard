@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoValut - Notifications</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/chartstyle.css">
+</head>
+<body>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="close">✖</div>
+    </button>
+    <aside class="sidebar">
+        <div class="aside-head">
+            <h2 class="CV-logo">CV</h1>
+            <h1>CryptoValut</h1>
+        </div>
+        <div class="main-menu">
+            <h2>MAIN MENU</h2>
+            <nav>
+                <ul>
+                    <li><a href="/index.html"><i class="fa-solid fa-layer-group"></i>Dashboard</a></li>
+                    <li><a href="/market.html"><i class="fa-solid fa-chart-line"></i>Markets</a></li>
+                    <li><a href="/wallet.html"><i class="fa-regular fa-credit-card"></i>Wallet</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-menu">
+            <h2>ACCOUNT</h2>
+            <nav>
+                <ul>
+                    <li><a href="profile.html" class="active"><i class="fa-solid fa-gear"></i>Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="aside-footer">
+            <a href="" class="light-mode"><i class="fa-regular fa-lightbulb"></i>Light Mode</a>
+            <a href="/crypto-login.html" class="logout"><i class="fa-solid fa-right-to-bracket"></i>Logout</a>
+        </div>
+    </aside>
+
+  <main class="content">
+    <div class="content-header">
+        <div class="content-navigation">
+            <h1>Settings</h1>
+            <p>Manage your account preferences and security</p>
+        </div>
+    </div>
+
+    <div class="settings-tabs">
+        <a href="/Settings/profile.html" class="settings-tab" data-tab="profile">Profile</a>
+        <a href="/Settings/security.html" class="settings-tab" data-tab="security">Security</a>
+        <a href="/Settings/notifications.html" class="settings-tab active" data-tab="notifications">Notifications</a>
+        <a href="/Settings/preferences.html" class="settings-tab" data-tab="preferences">Preferences</a>
+        <a href="/Settings/connected.html" class="settings-tab" data-tab="connected">Connected</a>
+    </div>
+
+    <div class="card">
+        <div class="card-header-settings">
+            <h2>Notification Preferences</h2>
+            <p>Choose how you want to receive updates</p>
+        </div>
+        <div class="toggle-item">
+            <div class="toggle-info">
+                <div class="toggle-title">Price Alerts</div>
+                <div class="toggle-description">Get notified when prices hit your targets</div>
+            </div>
+            <div class="toggle-switch"></div>
+        </div>
+        <div class="toggle-item">
+            <div class="toggle-info">
+                <div class="toggle-title">Transaction Updates</div>
+                <div class="toggle-description">Receive alerts for deposits, withdrawals, and trades</div>
+            </div>
+            <div class="toggle-switch"></div>
+        </div>
+        <div class="toggle-item">
+            <div class="toggle-info">
+                <div class="toggle-title">Security Alerts</div>
+                <div class="toggle-description">Important security notifications and login alerts</div>
+            </div>
+            <div class="toggle-switch"></div>
+        </div>
+        <div class="toggle-item">
+            <div class="toggle-info">
+                <div class="toggle-title">Marketing Emails</div>
+                <div class="toggle-description">News, updates, and promotional offers</div>
+            </div>
+            <div class="toggle-switch"></div>
+        </div>
+        <div class="toggle-item">
+            <div class="toggle-info">
+                <div class="toggle-title">Weekly Report</div>
+                <div class="toggle-description">Portfolio performance summary every week</div>
+            </div>
+            <div class="toggle-switch"></div>
+        </div>
+        <div class="toggle-item">
+            <div class="toggle-info">
+                <div class="toggle-title">Push Notifications</div>
+                <div class="toggle-description">Enable browser push notifications</div>
+            </div>
+            <div class="toggle-switch"></div>
+        </div>
+    </div>
+
+    <footer>
+    <div class="footer">Copyright &copy; 2026 CryptoVault.</div>
+    </footer>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>

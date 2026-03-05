@@ -1,0 +1,1167 @@
+
+:root {
+  --bg-main: #1c1c1e;
+  --bg-sidebar: #232325;
+  --bg-border: #3a3a3c;
+  --bg-card: hsl(0, 0%, 40%);
+  --bg-hover: hsl(0, 0%, 25%);
+  --primary: #d08b4f;
+  --primary-hover: #e3a469;
+  --primary-active: #b8743c;
+  --success: #4caf50;
+  --danger: #e05a5a;
+  --text-primary: #ffffff;
+  --text-secondary: #a8a8a8;
+  --text-muted: #6e6e6e;
+  --border: #2c2c2e;
+  --gain: #6B8E6B;
+  --loss: #c27878;
+  --accent-gradient:linear-gradient(135deg, #b87333 0%, #d4945a 50%, #c9845a 100%);
+
+
+  --chart-line: #b87333;
+  --chart-line-light: #c9845a;
+  --chart-line-soft: #daa57a;
+
+  --chart-area: rgba(184, 115, 51, 0.4);
+  --chart-area-mid: rgba(184, 115, 51, 0.15);
+
+  --chart-grid: #2a2d34;
+  --chart-dot: #b87333;
+}
+.chart-container {
+  width: 100%;
+    position: relative;
+    margin-top: 20px;
+    max-width: 900px;
+}
+.line-chart {
+  width: 100%;
+  height: 200px;
+}
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.bar-chart {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 27px;
+  
+}
+.bar-chart text {
+  font-family: inherit;
+    font-size: 18px;
+}
+.bar-chart rect {
+  transition: 0.3s ease;
+}
+.bar-chart rect:hover {
+  opacity: 0.85;
+  transform: translateY(-4px);
+}
+.candlestick-chart{
+    margin-top: 20px;
+}
+.donut-chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 0;
+}
+.donut-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.gauge-container {
+    display: flex;
+    flex-direction
+: column;
+    align-items: center;
+    padding: 16px 0;
+}
+.gauge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+}
+.gauge {
+    width: 120px;
+    height: 80px;
+}
+.transactions-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.transaction-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.transaction-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.transaction-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.transaction-date {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+.transaction-amount {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.transaction-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.transaction-amount.negative{
+    color: var(--loss);
+}
+.transaction-amount.positive{
+    color: var(--gain);
+}
+.transaction-icon.buy{
+    background-color: rgba(107, 142, 107, 0.2);
+    color: var(--gain);
+}
+.transaction-icon.sell{
+    background-color: rgba(194, 120, 120, 0.2);
+    color: var(--loss);
+}
+.transaction-icon.transfer {
+    background-color: rgba(184, 115, 51, 0.2);
+    color: var(--primary);
+}
+.market-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.market-table-card{
+    max-width: 750px;
+    width: 100%;
+}
+.market-table th.text-right {
+    text-align: right;
+}
+.market-table th {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--bg-card);
+}
+.market-table td {
+    padding: 16px;
+    border-bottom: 1px solid var();
+    color: var(--bg-card);
+    vertical-align: middle;
+}
+.price-cell {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: right;
+}
+.change-cell {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+}
+.volume-cell, .mcap-cell {
+    text-align: right;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+.star-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    padding: 4px;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+.coin-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+}
+.coin-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+.coin-cell h2{
+    background-color: rgba(184, 115, 51, 0.15);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 12px;
+    border-radius: 8px;
+}
+.coin-symbol{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--bg-card);
+}
+.change-cell.positive {
+    color: var(--success);
+}
+.change-cell.negative {
+    color: var(--danger);
+}
+.transaction-value {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.transaction-value.positive {
+    color: var(--gain);
+}
+.transaction-value.negative {
+    color: var(--loss);
+}
+.coin-icon.btc {
+    background: linear-gradient(135deg, #f7931a, #c77b15);
+}
+.coin-icon.eth {
+    background: linear-gradient(135deg, #627eea, #4a5fc1);
+}
+.coin-icon.usdt {
+    background: linear-gradient(135deg, #26a17b, #1a7a5c);
+}
+.coin-icon.bnb {
+    background: linear-gradient(135deg, #f3ba2f, #c99a27);
+}
+.coin-icon.sol {
+    background: linear-gradient(135deg, #9945ff, #14f195);
+}
+.coin-icon.xrp {
+    background: linear-gradient(135deg, #23292f, #000000);
+}
+.coin-icon.ada {
+    background: linear-gradient(135deg, #0033ad, #002276);
+}
+.coin-icon.doge {
+    background: linear-gradient(135deg, #c3a634, #ba9f33);
+}
+.coin-icon.dot {
+    background: linear-gradient(135deg, #e6007a, #c40068);
+}
+.coin-icon.matic {
+    background: linear-gradient(135deg, #8247e5, #6b3bc4);
+}
+.fear-greed {
+    margin-top: 24px;
+}
+.fear-greed-meter {
+    height: 12px;
+    background: linear-gradient(90deg, #c27878, #c9a878, #6b8e6b);
+    border-radius: 6px;
+    position: relative;
+    margin: 16px 0;
+}
+.fear-greed-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.fear-greed-value{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.fear-greed-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.fear-greed-label {
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 600;
+}
+.wallet-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+}
+.wallet-icon.btc {
+    background: linear-gradient(135deg, #f7931a, #c77b15);
+}
+.wallet-icon.eth {
+    background: linear-gradient(135deg, #627eea, #4a5fc1);
+}
+.wallet-icon.usdt {
+    background: linear-gradient(135deg, #26a17b, #1a7a5c);
+}
+.wallet-icon.bnb {
+    background: linear-gradient(135deg, #f3ba2f, #c99a27);
+}
+.wallet-icon.sol {
+    background: linear-gradient(135deg, #9945ff, #14f195);
+}
+.wallet-icon.xrp {
+    background: linear-gradient(135deg, #23292f, #000000);
+}
+.wallet-icon.ada {
+    background: linear-gradient(135deg, #0033ad, #002276);
+}
+.wallet-icon.doge {
+    background: linear-gradient(135deg, #c3a634, #ba9f33);
+}
+.wallet-icon.dot {
+    background: linear-gradient(135deg, #e6007a, #c40068);
+}
+.wallet-icon.matic {
+    background: linear-gradient(135deg, #8247e5, #6b3bc4);
+}
+.wallet-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.04);
+}
+.wallet-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+.wallet-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.wallet-name{
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.wallet-address{
+    color: var(--text-muted);
+    font-size: 13px;
+}
+.wallet-balance{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: right;
+}
+.wallet-amount{
+    width: 80px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.wallet-usd{
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+.copy-btn{
+    padding: 8px;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+.copy-btn:hover {
+    background-color: var(--bg-card-hover);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.qr-code {
+    width: 180px;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.qr-section{
+    margin-top: 24px;
+    padding: 24px;
+}
+.qr-address {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-family: monospace;
+    word-break: break-all;
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+.qr-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+.qr-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid var(--bg-card);
+    background-color: transparent;
+    color: var(--text-primary);
+}
+.qr-btn:hover{
+    background-color: rgba(255, 255, 255, 0.03);
+}
+.qr-btn.primary{
+    background: var(--accent-gradient);
+    color: black;
+    border: none;
+    transition: 0.3s all;
+}
+.staking-grid{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    margin-top: 24px;
+    gap: 16px;
+}
+.staking-card{
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--bg-border);
+}
+.staking-header{
+    display: flex;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+.staking-name{
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 600;
+}
+.staking-apy{
+    font-size: 13px;
+    color: var(--gain);
+    margin-top: 5px;
+}
+.staking-details{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.staking-label{
+    color: var(--text-muted);
+    font-size: 13px;
+}
+.staking-value{
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+.staking-btn{
+    width: 100%;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+    font-weight: 600;
+    transition: 0.3s all;
+}
+.staking-btn:hover{
+    background-color: var(--primary);
+    color: black;
+}
+.transactions{
+    margin-top: 24px;
+}
+.transaction-list{
+    margin-top: 24px;
+}
+.transaction-item{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--bg-border);
+}
+.transaction-icon.deposit{
+    background-color: rgba(107, 142, 107, 0.2);
+}
+.transaction-icon.withdraw {
+    background-color: rgba(194, 120, 120, 0.2);
+}
+.transaction-icon.stake {
+    background-color: rgba(184, 115, 51, 0.2);
+}
+.transaction-type{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.transaction-info{
+    flex: 1;
+}
+.transaction-amount{
+    text-align: right;
+}
+.transaction-status {
+    font-weight: 100;
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.transaction-status.completed {
+    background-color: rgba(107, 142, 107, 0.2);
+    color: var(--gain);
+}
+.transaction-status.pending {
+    background-color: rgba(184, 115, 51, 0.2);
+    color: var(--primary);
+}
+.watchlist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--bg-border);
+}
+.sparkline {
+    width: 60px;
+    height: 24px;
+}
+.watchlist-data{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.coin-price{
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+.coin-change.positive{
+    font-size: 12px;
+    color: var(--gain);
+}
+.coin-change.negative{
+    font-size: 12px;
+    color: var(--loss);
+}
+.watchlist-coin{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+}
+
+
+@media (max-width:1024px) {
+    
+.chart-container {
+  width: 100%;
+    position: relative;
+    margin-top: 20px;
+    max-width: 900px;
+}
+.line-chart {
+  width: 100%;
+  height: 200px;
+}
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.bar-chart {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 27px;
+  
+}
+.bar-chart text {
+  font-family: inherit;
+    font-size: 18px;
+}
+.bar-chart rect {
+  transition: 0.3s ease;
+}
+.bar-chart rect:hover {
+  opacity: 0.85;
+  transform: translateY(-4px);
+}
+.candlestick-chart{
+    margin-top: 20px;
+}
+.donut-chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 0;
+}
+.donut-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.gauge-container {
+    display: flex;
+    flex-direction
+: column;
+    align-items: center;
+    padding: 16px 0;
+}
+.gauge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+}
+.gauge {
+    width: 120px;
+    height: 80px;
+}
+.transactions-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.transaction-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.transaction-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.transaction-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.transaction-date {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+.transaction-amount {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.transaction-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.transaction-amount.negative{
+    color: var(--loss);
+}
+.transaction-amount.positive{
+    color: var(--gain);
+}
+.transaction-icon.buy{
+    background-color: rgba(107, 142, 107, 0.2);
+    color: var(--gain);
+}
+.transaction-icon.sell{
+    background-color: rgba(194, 120, 120, 0.2);
+    color: var(--loss);
+}
+.transaction-icon.transfer {
+    background-color: rgba(184, 115, 51, 0.2);
+    color: var(--primary);
+}
+.market-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.market-table-card{
+    max-width: 750px;
+    width: 100%;
+}
+.market-table th.text-right {
+    text-align: right;
+}
+.market-table th:nth-last-child(-n+3),
+    .market-table td:nth-last-child(-n+3) {
+        display: none;
+    }
+
+.market-table td {
+    padding: 10px;
+    border-bottom: 1px solid var();
+    color: var(--bg-card);
+    vertical-align: middle;
+}
+.price-cell {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: right;
+}
+.change-cell {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+}
+.volume-cell, .mcap-cell {
+    text-align: right;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+.star-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    padding: 4px;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+.coin-icon {
+    width: 30px;
+    height: 30px;
+}
+.coin-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+.coin-cell h2{
+    background-color: rgba(184, 115, 51, 0.15);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 12px;
+    border-radius: 8px;
+}
+.coin-symbol{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--bg-card);
+}
+.change-cell.positive {
+    color: var(--success);
+}
+.change-cell.negative {
+    color: var(--danger);
+}
+.transaction-value {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.transaction-value.positive {
+    color: var(--gain);
+}
+.transaction-value.negative {
+    color: var(--loss);
+}
+.coin-icon.btc {
+    background: linear-gradient(135deg, #f7931a, #c77b15);
+}
+.coin-icon.eth {
+    background: linear-gradient(135deg, #627eea, #4a5fc1);
+}
+.coin-icon.usdt {
+    background: linear-gradient(135deg, #26a17b, #1a7a5c);
+}
+.coin-icon.bnb {
+    background: linear-gradient(135deg, #f3ba2f, #c99a27);
+}
+.coin-icon.sol {
+    background: linear-gradient(135deg, #9945ff, #14f195);
+}
+.coin-icon.xrp {
+    background: linear-gradient(135deg, #23292f, #000000);
+}
+.coin-icon.ada {
+    background: linear-gradient(135deg, #0033ad, #002276);
+}
+.coin-icon.doge {
+    background: linear-gradient(135deg, #c3a634, #ba9f33);
+}
+.coin-icon.dot {
+    background: linear-gradient(135deg, #e6007a, #c40068);
+}
+.coin-icon.matic {
+    background: linear-gradient(135deg, #8247e5, #6b3bc4);
+}
+.fear-greed {
+    margin-top: 24px;
+}
+.fear-greed-meter {
+    height: 12px;
+    background: linear-gradient(90deg, #c27878, #c9a878, #6b8e6b);
+    border-radius: 6px;
+    position: relative;
+    margin: 16px 0;
+}
+.fear-greed-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.fear-greed-value{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.fear-greed-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.fear-greed-label {
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 600;
+}
+.wallet-icon {
+    width: 34px;
+    height: 34px;
+}
+.wallet-icon.btc {
+    background: linear-gradient(135deg, #f7931a, #c77b15);
+}
+.wallet-icon.eth {
+    background: linear-gradient(135deg, #627eea, #4a5fc1);
+}
+.wallet-icon.usdt {
+    background: linear-gradient(135deg, #26a17b, #1a7a5c);
+}
+.wallet-icon.bnb {
+    background: linear-gradient(135deg, #f3ba2f, #c99a27);
+}
+.wallet-icon.sol {
+    background: linear-gradient(135deg, #9945ff, #14f195);
+}
+.wallet-icon.xrp {
+    background: linear-gradient(135deg, #23292f, #000000);
+}
+.wallet-icon.ada {
+    background: linear-gradient(135deg, #0033ad, #002276);
+}
+.wallet-icon.doge {
+    background: linear-gradient(135deg, #c3a634, #ba9f33);
+}
+.wallet-icon.dot {
+    background: linear-gradient(135deg, #e6007a, #c40068);
+}
+.wallet-icon.matic {
+    background: linear-gradient(135deg, #8247e5, #6b3bc4);
+}
+.wallet-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.04);
+}
+.wallet-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+.wallet-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.wallet-name{
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.wallet-address{
+    word-wrap: break-word;
+    width: 150px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+.wallet-balance{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: right;
+}
+.wallet-amount{
+    font-size: 14px;
+}
+.wallet-usd{
+    font-size: 12px;
+}
+.copy-btn{
+    display: none;
+}
+.copy-btn:hover {
+    background-color: var(--bg-card-hover);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.qr-code {
+    width: 180px;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.qr-section{
+    margin-top: 24px;
+    padding: 24px;
+}
+.qr-address {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-family: monospace;
+    word-break: break-all;
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+.qr-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+.qr-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid var(--bg-card);
+    background-color: transparent;
+    color: var(--text-primary);
+}
+.qr-btn:hover{
+    background-color: rgba(255, 255, 255, 0.03);
+}
+.qr-btn.primary{
+    background: var(--accent-gradient);
+    color: black;
+    border: none;
+    transition: 0.3s all;
+}
+.staking-grid{
+    display: flex;
+    flex-direction: column;
+}
+.staking-card{
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--bg-border);
+}
+.staking-header{
+    display: flex;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+.staking-name{
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 600;
+}
+.staking-apy{
+    font-size: 13px;
+    color: var(--gain);
+    margin-top: 5px;
+}
+.staking-details{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.staking-label{
+    color: var(--text-muted);
+    font-size: 13px;
+}
+.staking-value{
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+.staking-btn{
+    width: 100%;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+    font-weight: 600;
+    transition: 0.3s all;
+}
+.staking-btn:hover{
+    background-color: var(--primary);
+    color: black;
+}
+.transactions{
+    margin-top: 24px;
+}
+.transaction-list{
+    margin-top: 24px;
+}
+.transaction-item{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--bg-border);
+}
+.transaction-icon.deposit{
+    background-color: rgba(107, 142, 107, 0.2);
+}
+.transaction-icon.withdraw {
+    background-color: rgba(194, 120, 120, 0.2);
+}
+.transaction-icon.stake {
+    background-color: rgba(184, 115, 51, 0.2);
+}
+.transaction-type{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.transaction-info{
+    flex: 1;
+}
+.transaction-amount{
+    text-align: right;
+}
+.transaction-status {
+    font-weight: 100;
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.transaction-status.completed {
+    background-color: rgba(107, 142, 107, 0.2);
+    color: var(--gain);
+}
+.transaction-status.pending {
+    background-color: rgba(184, 115, 51, 0.2);
+    color: var(--primary);
+}
+.watchlist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--bg-border);
+}
+.sparkline {
+    width: 60px;
+    height: 24px;
+}
+.watchlist-data{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.coin-price{
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+.coin-change.positive{
+    font-size: 12px;
+    color: var(--gain);
+}
+.coin-change.negative{
+    font-size: 12px;
+    color: var(--loss);
+}
+.watchlist-coin{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+}
+}

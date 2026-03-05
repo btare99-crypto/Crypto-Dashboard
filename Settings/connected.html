@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoValut - Preferences</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/chartstyle.css">
+</head>
+<body>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="close">✖</div>
+    </button>
+    <aside class="sidebar">
+        <div class="aside-head">
+            <h2 class="CV-logo">CV</h1>
+            <h1>CryptoValut</h1>
+        </div>
+        <div class="main-menu">
+            <h2>MAIN MENU</h2>
+            <nav>
+                <ul>
+                    <li><a href="/index.html"><i class="fa-solid fa-layer-group"></i>Dashboard</a></li>
+                    <li><a href="/market.html"><i class="fa-solid fa-chart-line"></i>Markets</a></li>
+                    <li><a href="/wallet.html"><i class="fa-regular fa-credit-card"></i>Wallet</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-menu">
+            <h2>ACCOUNT</h2>
+            <nav>
+                <ul>
+                    <li><a href="profile.html" class="active"><i class="fa-solid fa-gear"></i>Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="aside-footer">
+            <a href="" class="light-mode"><i class="fa-regular fa-lightbulb"></i>Light Mode</a>
+            <a href="/crypto-login.html" class="logout"><i class="fa-solid fa-right-to-bracket"></i>Logout</a>
+        </div>
+    </aside>
+
+  <main class="content">
+    <div class="content-header">
+        <div class="content-navigation">
+            <h1>Settings</h1>
+            <p>Manage your account preferences and security</p>
+        </div>
+    </div>
+
+    <div class="settings-tabs">
+        <a href="/Settings/profile.html" class="settings-tab" data-tab="profile">Profile</a>
+        <a href="/Settings/security.html" class="settings-tab" data-tab="security">Security</a>
+        <a href="/Settings/notifications.html" class="settings-tab" data-tab="notifications">Notifications</a>
+        <a href="/Settings/preferences.html" class="settings-tab" data-tab="preferences">Preferences</a>
+        <a href="/Settings/connected.html" class="settings-tab active" data-tab="connected">Connected</a>
+    </div>
+
+    <div class="card">
+        <div class="card-header-settings">
+            <h2>Connected Exchanges</h2>
+            <p>Link your exchange accounts for seamless trading</p>
+        </div>
+        <div class="connected-item">
+            <div class="connected-icon metamask">🦊</div>
+            <div class="connected-info">
+                <div class="connected-name">MetaMask</div>
+                <div class="connected-status">Connected • 0x742d...5f83</div>
+            </div>
+            <button class="security-btn">Disconnect</button>
+        </div>
+        <div class="connected-item">
+            <div class="connected-icon coinbase">C</div>
+            <div class="connected-info">
+                <div class="connected-name">Coinbase</div>
+                <div class="connected-status">Connected • btare99@gmail.com</div>
+            </div>
+            <button class="security-btn">Disconnect</button>
+        </div>
+        <div class="connected-item">
+            <div class="connected-icon binance">B</div>
+            <div class="connected-info">
+                <div class="connected-name">Binance</div>
+                <div class="connected-status disconnected">Not connected</div>
+            </div>
+            <button class="security-btn active">Connect</button>
+        </div>
+        <div class="btn-group">
+            <button class="save-button active">+ Add Exchange</button>
+        </div>
+    </div>
+
+    <div class="card api-keys">
+        <div class="card-header">
+            <h2>Api Keys</h2>
+            <p>Manage your API access for third-party integrations</p>
+        </div>
+        <div class="form-group">
+            <label class="form-label">API Key</label>
+            <input type="text" class="form-input" value="cv_live_xxxxxxxxxxxxxxxxxxxxxxxx" readonly="">
+        </div>
+        <div class="btn-group">
+            <button class="save-button">Regenerate Key</button>
+            <button class="save-button">View Documentation</button>
+        </div>
+    </div>
+
+    <footer>
+    <div class="footer">Copyright &copy; 2026 CryptoVault.</div>
+    </footer>
+  </main>
+  <script src="/script.js"></script>
+
+</body>
+</html>

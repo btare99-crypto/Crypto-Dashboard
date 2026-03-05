@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoValut - Security</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/chartstyle.css">
+</head>
+<body>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="close">✖</div>
+    </button>
+    <aside class="sidebar">
+        <div class="aside-head">
+            <h2 class="CV-logo">CV</h1>
+            <h1>CryptoValut</h1>
+        </div>
+        <div class="main-menu">
+            <h2>MAIN MENU</h2>
+            <nav>
+                <ul>
+                    <li><a href="/index.html"><i class="fa-solid fa-layer-group"></i>Dashboard</a></li>
+                    <li><a href="/market.html"><i class="fa-solid fa-chart-line"></i>Markets</a></li>
+                    <li><a href="/wallet.html"><i class="fa-regular fa-credit-card"></i>Wallet</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-menu">
+            <h2>ACCOUNT</h2>
+            <nav>
+                <ul>
+                    <li><a href="profile.html" class="active"><i class="fa-solid fa-gear"></i>Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="aside-footer">
+            <a href="" class="light-mode"><i class="fa-regular fa-lightbulb"></i>Light Mode</a>
+            <a href="/crypto-login.html" class="logout"><i class="fa-solid fa-right-to-bracket"></i>Logout</a>
+        </div>
+    </aside>
+
+  <main class="content">
+    <div class="content-header">
+        <div class="content-navigation">
+            <h1>Settings</h1>
+            <p>Manage your account preferences and security</p>
+        </div>
+    </div>
+
+    <div class="settings-tabs">
+        <a href="/Settings/profile.html" class="settings-tab" data-tab="profile">Profile</a>
+        <a href="/Settings/security.html" class="settings-tab active" data-tab="security">Security</a>
+        <a href="/Settings/notifications.html" class="settings-tab" data-tab="notifications">Notifications</a>
+        <a href="/Settings/preferences.html" class="settings-tab" data-tab="preferences">Preferences</a>
+        <a href="/Settings/connected.html" class="settings-tab" data-tab="connected">Connected</a>
+    </div>
+
+    <div class="card">
+        <div class="card-header-settings">
+            <h2>Security Settings</h2>
+            <p>Manage your account security and authentication methods</p>
+        </div>
+
+        <div class="security-item">
+            <div class="security-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b87333" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                </svg>
+            </div>
+            <div class="security-info">
+                <div class="security-title">Password</div>
+                <div class="security-status enabled">Last changed 30 days ago</div>
+            </div>
+            <button class="security-btn">Change Password</button>
+        </div>
+
+        <div class="security-item">
+            <div class="security-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b87333" stroke-width="2">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+            </div>
+            <div class="security-info">
+                <div class="security-title">Two-Factor Authentication</div>
+                <div class="security-status enabled">Enabled via Authenticator App</div>
+            </div>
+            <button class="security-btn">Manage</button>
+        </div>
+
+        <div class="security-item">
+            <div class="security-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b87333" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+            </div>
+            <div class="security-info">
+                <div class="security-title">Biometric Login</div>
+                <div class="security-status disabled">Not configured</div>
+            </div>
+            <button class="security-btn active">Enable</button>
+        </div>
+
+        <div class="security-item">
+            <div class="security-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b87333" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+            </div>
+            <div class="security-info">
+                <div class="security-title">Active Sessions</div>
+                <div class="security-status enabled">3 devices currently logged in</div>
+            </div>
+            <button class="security-btn">View All</button>
+        </div>
+    </div>
+    
+    <div class="card danger-zone">
+        <div class="card-header-settings">
+            <h2>Danger Zone</h2>
+            <p>Irreversible actions for your account</p>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn danger">Delete Account</button>
+            <button class="btn danger">Export All Data</button>
+        </div>
+    </div>
+
+
+
+    <footer>
+    <div class="footer">Copyright &copy; 2026 CryptoVault.</div>
+    </footer>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>
